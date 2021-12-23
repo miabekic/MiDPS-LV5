@@ -15,6 +15,10 @@ public class GreenGOSystem {
 
     private string localBackupTime = "3 AM";
 
+    private DateTime lastBackup;
+
+
+
 
 
 
@@ -306,6 +310,15 @@ public class GreenGOSystem {
     /// @return
     /// </summary>
     public void markItineraryAsFinished(string id) {
+        // TODO implement here
+        return null;
+    }
+
+    /// <summary>
+    /// @param newUser 
+    /// @return
+    /// </summary>
+    public void registerNewUser(UsersOfSystem newUser) {
         // TODO implement here
         return null;
     }
