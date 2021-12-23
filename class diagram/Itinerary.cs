@@ -8,6 +8,12 @@ public class Itinerary {
 
     public Itinerary() {
     }
+    public Itinerary(DateTime dateFrom, DataTime dateTo, List<Service> includedServices, List<POI> includedPOIs) {
+        this.dateFrom=dateFrom;
+        this.dateTo=dateTo;
+        this.includedServices=includedServices;
+        this.includedPOIs=includedPOIs;
+    }
 
     private DateTime dateFrom;
 

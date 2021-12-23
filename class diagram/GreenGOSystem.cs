@@ -37,9 +37,14 @@ public class GreenGOSystem {
     /// @param itineraries 
     /// @return
     /// </summary>
-    public void displayItineraries(List<Itinerary> itineraries) {
+    public void displayItineraries(List<Itinerary> itineraries) {//in this method we display gotten list of itineraries on the web site
         // TODO implement here
-        return null;
+        //defining ListView and its columns
+        foreach(Itinerary itinerary in itineraries){
+            //creating new ListViewItem and its subitems according to the attributes of Itinerary objekt
+            //adding new ListViewItem in ListView
+        }
+        //display ListView on the web site
     }
 
     /// <summary>
@@ -110,9 +115,8 @@ public class GreenGOSystem {
     /// <summary>
     /// @return
     /// </summary>
-    public void displayFormNewItinerary() {
+    public void displayFormNewItinerary() { //this method displays a form for entering data based on which itineraries will be generated
         // TODO implement here
-        return null;
     }
 
     /// <summary>
@@ -275,7 +279,15 @@ public class GreenGOSystem {
     /// </summary>
     public List<Itinerary> createItineraries(Itinerary itinerary) {
         // TODO implement here
-        return null;
+        // Database searching and getting results
+        List<Itinerary> itineraries;
+        for(int i=0; i<numberOfValueGottenFromDatabase; i++){
+            Itinerary itinerary=new Itinerary(dateFrom, dateTo, includedServices, includedPOIs); //listed parameters are obtained
+                                                                                                //as data from the database
+                                                                                                
+            itineraries.Add(itinerary);
+        }
+        return itineraries;
     }
 
     /// <summary>
@@ -300,9 +312,15 @@ public class GreenGOSystem {
     /// @param itinerary 
     /// @return
     /// </summary>
-    public void generateItinerary(Itinerary itinerary) {
+    public void generateItinerary(Itinerary itinerary) {//this method is called when user presses the button for generating itineraries;
+                                                        //when user presses that button, object Itinerary (that is going to be passed
+                                                        //to this method) is created according to the dataentered in the form and
+                                                        //then this method is called 
+        
         // TODO implement here
-        return null;
+        List<Itinerary> itineraries;
+        itineraries=createItineraries(itinerary);
+        displayItineraries(itineraries);
     }
 
     /// <summary>
